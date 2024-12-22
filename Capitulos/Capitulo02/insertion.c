@@ -5,6 +5,7 @@ int lista[N]={4,5,8,2,9,1,3,7,6};
 //int lista[N]={9,8,7,6,5,4,3,2,1};
 int trocas=0;
 int comp=0;
+void insertionSort(int *lista, int tamanho);
 void main() {
     int k;
 	printf("INSERTION SORT\n\n");
