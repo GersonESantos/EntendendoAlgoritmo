@@ -3,9 +3,10 @@ int procurabinaria(int[], int, int);
 
 int main() {
 	int minhalista[] = {0, 1, 2, 3, 5, 7, 9};
+	printf("A lista deve estar ordenada\n");
 	int len = sizeof(minhalista) / sizeof(minhalista[0]);
-	//printf("%d / %d\n", sizeof(minhalista) , sizeof(minhalista[0])); // 28
-	//printf("%d\n", len); // 7
+	printf("%d / %d\n", sizeof(minhalista) , sizeof(minhalista[0])); // 28
+	printf("%d\n", len); // 7
     printf("%d\n", procurabinaria(minhalista, 3, len));  // 1
 	printf("%d\n", procurabinaria(minhalista, -1, len)); //-1
 	
