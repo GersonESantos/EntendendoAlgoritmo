@@ -3,7 +3,8 @@
 int lista[9]={4,5,8,2,9,1,3,7,6};
 int trocas=0;
 int comp=0;
-void classifica(int *lista, int tamanho);
+void classifica(int *lista, int tamanho); 
+
 void main() {
     int k;
     printf("CLASSIFICACAO\n\n");
