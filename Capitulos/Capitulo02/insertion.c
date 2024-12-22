@@ -9,7 +9,8 @@ void main() {
     int k;
 	printf("INSERTION SORT\n\n");
 	printf("Lista original: ");
-	for(k=0;k<N;k++) {printf("%d ",lista[k]);}
+	for(k=0;k<N;k++) 
+	{printf("%d ",lista[k]);}
 	insertionSort(lista,N);
     printf("\nLista ordenada: ");
 	for(k=0;k<N;k++) {printf("%d ",lista[k]);}
