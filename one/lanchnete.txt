@@ -1,0 +1,9 @@
+Sua tarefa é criar um algoritmo em linguagem C que armazene os dados necessários em variáveis e faça o cálculo do valor total com base nas quantidades informadas.
+
+Para resolver esse desafio, começamos criando variáveis para armazenar os preços fixos dos itens: preco_hamburguer = 12, preco_batata = 7 e preco_refri = 5.
+
+Em seguida, usamos outras variáveis para guardar as quantidades que o cliente informou: qtd_hamburguer, qtd_batata e qtd_refri.
+
+Com esses valores, é possível calcular o subtotal de cada item multiplicando a quantidade pelo preço correspondente. Depois, somamos todos os subtotais para obter o valor total do pedido: total_pedido = total_hamburguer + total_batata + total_refri.
+
+Por fim, exibimos o resultado com uma mensagem clara, informando quanto o cliente deve pagar.

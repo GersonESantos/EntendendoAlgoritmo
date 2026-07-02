@@ -1,0 +1,40 @@
+Você está trabalhando como pessoa desenvolvedora júnior em uma equipe que está criando um sistema para auxiliar no controle de presença em eventos online. O time precisa de um algoritmo que processe a lista de participantes e envie um e-mail de agradecimento apenas para quem participou de toda a transmissão ao vivo.
+
+“Queremos automatizar o envio de agradecimentos. Mas só para quem assistiu à transmissão do início ao fim. Você consegue organizar esse processo em um algoritmo?”
+
+Considere:
+
+Quais são os dados de entrada necessários?
+Como o programa pode verificar a condição de presença completa?
+Que decisão precisa ser tomada com base nesses dados?
+Qual deve ser a ação final?
+
+Uma forma possível de resolver esse desafio é:
+
+Dados de entrada: lista de participantes com horários de entrada e saída.
+
+Verificação: comparar se o tempo de permanência corresponde à duração total da transmissão.
+
+Decisão: se o tempo assistido for igual ou maior ao tempo total do evento, então enviar e-mail.
+
+Algoritmo (em linguagem C):
+
+Para cada participante da lista:
+a. Calcular tempo assistido.
+b. Verificar se o tempo é igual ao tempo total da transmissão.
+c. Se for, enviar e-mail de agradecimento.
+d. Senão, não enviar.
+
+Para resolver isso em C, nós podemos representar os participantes usando uma struct (estrutura de dados) 
+para organizar as informações de cada um, e depois usar um laço de repetição (for ou while) junto com 
+uma estrutura condicional (if/else) para tomar a decisão.Para resolver isso em C, nós podemos representar 
+os participantes usando uma struct (estrutura de dados) para organizar as informações de cada um, e depois 
+usar um laço de repetição (for ou while) junto com uma estrutura condicional (if/else) para tomar a decisão.
+
+🔍 O que esse código faz?Estrutura (struct): Agrupa os dados de entrada (nome, email, tempo_entrada, tempo_saida) 
+para que o código fique limpo e fácil de ler.Cálculo Simples: O tempo assistido é calculado 
+entrada do minuto de saída 
+($tempo\_saida - tempo\_entrada$).
+Condicional Inteligente (if): Usamos >= DURACAO_TOTAL_EVENTO por segurança. 
+Se o tempo assistido bater ou passar o tempo do evento, o e-mail dispara. 
+Caso contrário (else), ele apenas pula o participante e avisa no console.

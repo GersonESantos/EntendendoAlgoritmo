@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+
+// Definição do tempo total do evento em minutos (ex: 2 horas = 120 minutos)
+#define DURACAO_TOTAL_EVENTO 120
+
+// Estrutura para armazenar os dados de cada participante
+typedef struct {
+    char nome[50];
+    char email[50];
+    int tempo_entrada; // em minutos a partir do início do evento
+    int tempo_saida;   // em minutos a partir do início do evento
+} Participante;
+
+// Função simulada para o envio de e-mail
+void enviarEmailAgradecimento(char nome[], char email[]) {
+    printf("📧 E-mail enviado com sucesso para: %s (%s)\n", nome, email);
+    printf("   \"Obrigado por acompanhar todo o nosso evento!\"\n\n");
+}
+
+int main() {
+    // 1. Dados de Entrada: Criando uma lista (array) de participantes para teste
+    Participante lista_participantes[] = {
+        {"Ana Silva", "ana@email.com", 0, 120},       // Assistiu tudo
+        {"Bruno Souza", "bruno@email.com", 15, 120},  // Chegou atrasado
+        {"Carlos Lima", "carlos@email.com", 0, 120},  // Assistiu tudo
+        {"Diana Oliveira", "diana@email.com", 0, 45}, // Saiu cedo
+    };
+
+    // Calculando o número total de participantes na lista
+    int total_participantes = sizeof(lista_participantes) / sizeof(lista_participantes[0]);
+
+    printf("=== PROCESSANDO LISTA DE PARTICIPANTES ===\n\n");
+
+    // Loop para processar cada participante da lista
+    for (int i = 0; i < total_participantes; i++) {
+        
+        // a. Calcular tempo assistido
+        int tempo_assistido = lista_participantes[i].tempo_saida - lista_participantes[i].tempo_entrada;
+        
+        printf("Analisando: %s | Tempo assistido: %d min\n", lista_participantes[i].nome, tempo_assistido);
+
+        // b. Verificar se o tempo é igual ao tempo total da transmissão
+        // c. Se for, enviar e-mail de agradecimento
+        if (tempo_assistido >= DURACAO_TOTAL_EVENTO) {
+            enviarEmailAgradecimento(lista_participantes[i].nome, lista_participantes[i].email);
+        } 
+        // d. Senão, não enviar
+        else {
+            printf("❌ Critério não atingido. E-mail não enviado.\n\n");
+        }
+    }
+
+    printf("=== PROCESSAMENTO CONCLUÍDO ===\n");
+
+    return 0;
+}
