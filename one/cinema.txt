@@ -1,0 +1,22 @@
+Você está desenvolvendo o sistema de bilheteria para um cinema. Os clientes podem ter direito a meia-entrada em duas situações:
+
+Se tiverem menos de 18 anos
+ou
+
+Se forem estudantes
+Sua tarefa é criar um PROGRAMA EM c (usando que avalie as informações do cliente e exiba uma mensagem indicando se ele tem ou não direito ao desconto.
+
+Neste caso, precisamos começar coletando duas informações do usuário:
+
+idade e estudante (um valor booleano: verdadeiro ou falso).
+
+Com esses dados, podemos aplicar uma expressão lógica que usa operadores relacionais e o operador OU (idade < 18 ou estudante == True) para verificar se alguma das condições do desconto é verdadeira.
+
+A estrutura do algoritmo pode seguir este formato:
+
+Solicitar a idade do cliente.
+Perguntar se ele é estudante (sim ou não / verdadeiro ou falso).
+Verificar se idade < 18 ou estudante é verdadeiro.
+Se a condição for satisfeita, exibir: "Meia-entrada aplicada."
+Caso contrário, exibir: "Valor integral."
+Esse tipo de verificação é bastante comum em sistemas reais, onde regras de negócio envolvem condições combinadas e precisam de decisões automáticas. É um ótimo exercício para praticar expressões lógicas com operadores relacionais e booleanos.

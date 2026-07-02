@@ -1,0 +1,24 @@
+Você está desenvolvendo um sistema para uma empresa de delivery. O valor da taxa de entrega depende da distância até o cliente e se o pedido foi feito em um dia de chuva.
+
+As regras são:
+
+Para entregas até 5 km, a taxa é R$ 5,00.
+Entre 5 e 10 km, a taxa é R$ 8,00.
+Acima de 10 km, a taxa é R$ 10,00.
+Se estiver chovendo, acrescenta R$ 2,00 à taxa padrão.
+O desafio desta atividade é criar um programa em  linguagem C que informe o valor final da entrega.
+
+O algoritmo pode ser organizado em três etapas:
+
+Entrada:
+Solicitar a distância até o endereço do cliente (em km).
+Perguntar se está chovendo (resposta booleana: verdadeiro ou falso).
+Processamento:
+Verificar a distância e atribuir a taxa base de acordo com as regras.
+Se estiver chovendo, adicionar R$ 2,00 à taxa base.
+Calcular o valor final da entrega.
+Saída:
+Exibir o valor total da taxa de entrega com uma mensagem clara, como: "Taxa de entrega: R$ X,00"
+
+
+
